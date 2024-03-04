@@ -1,10 +1,4 @@
-export interface BuildOptions {
-  mode: BuildMode
-  paths: BuildPaths
-  isDev: boolean
-  port: number
-}
-
+// eslint-disable-next-line no-shadow
 export enum BuildMode {
   DEVELOPMENT = 'development',
   PRODUCTION = 'production',
@@ -15,6 +9,13 @@ export interface BuildPaths {
   output: string
   htmlTemplate: string
   src: string
+}
+
+export interface BuildOptions {
+  mode: BuildMode
+  paths: BuildPaths
+  isDev: boolean
+  port: number
 }
 
 export interface Env {

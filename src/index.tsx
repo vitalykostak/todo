@@ -2,9 +2,9 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import { StoreProvider } from '@/app/providers/StoreProvider'
-import App from '@/app/App'
+import App from '@/app/app'
 
-const domElement = document.getElementById('root')
+const domElement = document.querySelector('#root')
 
 if (!domElement) {
   throw new Error('Provide dom element')
@@ -17,5 +17,5 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StoreProvider>
+  </StoreProvider>,
 )

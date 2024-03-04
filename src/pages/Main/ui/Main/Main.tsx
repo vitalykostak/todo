@@ -1,4 +1,4 @@
-import {type FC, memo } from 'react'
+import { type FC, memo } from 'react'
 import classnames from 'classnames'
 
 import { Page } from '@/widgets/Page'
@@ -14,7 +14,6 @@ const Main: FC<MainProps> = memo((props) => {
   return <Page className={classnames(className)}>
     <ToDoHub />
   </Page>
-  
 })
 
 export default Main

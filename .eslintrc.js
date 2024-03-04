@@ -1,56 +1,62 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true
+  'env': {
+    'browser': true,
+    'es2021': true,
+    'jest': true,
   },
-  extends: [
+  'extends': [
     '@wemake-services/typescript/recommended',
+    '@wemake-services/javascript',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
   ],
-  overrides: [
+  'overrides': [
     {
-      env: {
-        node: true
+      'env': {
+        'node': true,
       },
-      files: ['.eslintrc.{js,cjs}'],
-      parserOptions: {
-        sourceType: 'script'
-      }
-    }
+      'files': ['.eslintrc.{js,cjs}'],
+      'parserOptions': {
+        'sourceType': 'script',
+      },
+    },
   ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module',
   },
-  plugins: ['react', 'react-hooks', 'import', 'unused-imports'],
-  rules: {
+  'plugins': ['react', 'react-hooks', 'import', 'unused-imports'],
+  'rules': {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
-
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
-    'react/prop-types': 'off',
-    'react/display-name': 'off',
-    'react/react-in-jsx-scope': 'off',
     'import/order': [
       'error',
       {
-        'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        'groups': [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
         'pathGroups': [
           {
-            pattern: '@/**',
-            group: 'internal'
-          }
+            'pattern': '@/**',
+            'group': 'internal',
+          },
         ],
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
   },
-  "settings": {
-    "import/ignore": [".scss$"]
-  }
+  'settings': {
+    'import/ignore': ['.scss$'],
+  },
 }

@@ -1,7 +1,7 @@
 import { memo, type FC, type ReactNode } from 'react'
 import { Provider } from 'react-redux'
 
-import { createReduxStore } from '../../config/createStore'
+import { createReduxStore } from '../../config/create-store'
 
 interface StoreProviderProps {
   children: ReactNode

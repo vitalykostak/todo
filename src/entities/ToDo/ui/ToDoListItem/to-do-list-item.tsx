@@ -1,9 +1,9 @@
 import { memo, type FC } from 'react'
-import { Checkbox, Flex, Typography , List } from 'antd'
+import { Checkbox, Flex, Typography, List } from 'antd'
 
 import { ToDo } from '../../model/types'
 
-import styles from './ToDoListItem.module.scss'
+import styles from './to-do-list-item.module.scss'
 
 const { Text } = Typography
 
@@ -18,15 +18,15 @@ const ToDoListItem: FC<ToDoListItemProps> = memo((props) => {
   return (
     <List.Item>
       <Flex justify='space-between' align='center' className={styles.container}>
-        <Text 
+        <Text
           onClick={onChange}
-          type={todo.completed ? 'success' : 'secondary'} 
+          type={todo.completed ? 'success' : 'secondary'}
           className={styles.text}
         >
           {todo.text}
         </Text>
-        <Checkbox 
-          onChange={onChange} 
+        <Checkbox
+          onChange={onChange}
           checked={todo.completed}
         />
       </Flex>

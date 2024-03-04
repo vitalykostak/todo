@@ -4,19 +4,19 @@ import { memo, type FC, ReactNode } from 'react'
 import { ToDo } from '../../model/types'
 
 interface ToDoListProps {
-  items: ToDo[]
+  toDos: ToDo[]
   renderItem: (todo:ToDo)=>ReactNode
   header: ReactNode
-  footer: ReactNode
+  footer?: ReactNode
 }
 
 const ToDoList: FC<ToDoListProps> = memo((props) => {
-  const { renderItem, items, header, footer } = props
+  const { renderItem, toDos, header, footer } = props
 
   return (
     <List
       renderItem={renderItem}
-      dataSource={items}
+      dataSource={toDos}
       header={header}
       footer={footer}
       size="large"

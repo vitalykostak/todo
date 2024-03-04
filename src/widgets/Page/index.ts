@@ -1,1 +1,1 @@
-export { default as Page } from './ui/Page/Page'
+export { default as Page } from './ui/Page/page'

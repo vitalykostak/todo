@@ -4,8 +4,9 @@ export interface ToDo {
   completed: boolean
 }
 
-export enum ToDoFilterTypeEnum  {
-  ALL = "ALL",
-  COMPLETED = "COMPLETED",
-  CURRENT = "CURRENT"
+// eslint-disable-next-line no-shadow
+export enum ToDoFilterTypeEnum {
+  ALL = 'ALL',
+  COMPLETED = 'COMPLETED',
+  CURRENT = 'CURRENT'
 }

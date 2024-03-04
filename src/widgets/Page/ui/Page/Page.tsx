@@ -1,7 +1,7 @@
 import { type FC, type ReactNode } from 'react'
 import classnames from 'classnames'
 
-import styles from './Page.module.scss'
+import styles from './page.module.scss'
 
 interface PageProps {
   className?: string

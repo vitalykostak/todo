@@ -1,1 +1,1 @@
-export { useAppDispatch } from './useAppDispatch/useAppDispatch'
+export { useAppDispatch } from './useAppDispatch/use-app-dispatch'

@@ -1,6 +1,6 @@
-import { ToDo, ToDoFilterTypeEnum } from "@/entities/ToDo"
+import { ToDo, ToDoFilterTypeEnum } from '@/entities/ToDo'
 
 export interface ToDoHubSchema {
-  items: ToDo[]
+  itemsToDos: ToDo[]
   toDoFilterType: ToDoFilterTypeEnum
 }
