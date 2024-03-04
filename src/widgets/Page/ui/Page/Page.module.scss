@@ -1,10 +1,12 @@
+$breakpoint: 768px;
+
 .page {
     width: 40%;
     padding: 20px;
     overflow-y: auto;
     margin: 0 auto;
 
-    @media (max-width: 768px) {
-        width:90%
+    @media (max-width: $breakpoint) {
+        width: 90%
     }
 }

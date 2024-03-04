@@ -7,18 +7,20 @@ interface ToDoListProps {
   items: ToDo[]
   renderItem: (todo:ToDo)=>ReactNode
   header: ReactNode
+  footer: ReactNode
 }
 
 const ToDoList: FC<ToDoListProps> = memo((props) => {
-  const { renderItem, items, header } = props
+  const { renderItem, items, header, footer } = props
 
   return (
     <List
-      size="large"
-      header={header}
-      bordered
-      dataSource={items}
       renderItem={renderItem}
+      dataSource={items}
+      header={header}
+      footer={footer}
+      size="large"
+      bordered
     />
   )
 })

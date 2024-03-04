@@ -7,6 +7,7 @@ import { useAppDispatch } from '@/shared/lib/hooks'
 
 import { selectFilteredToDos, selectToDoHubFilterType } from '../../model/selectors'
 import { toDoHubActions } from '../../model/slices/toDoHubSlice/toDoHubSlice'
+import TaskCompletionReport from '../TaskCompletionReport/TaskCompletionReport'
 
 import styles from './ToDoHub.module.scss'
 
@@ -27,6 +28,7 @@ const ToDoHub: FC = memo(() => {
           <ToDoFilterSelector filter={toDoHubFilterType} onSelect={onSelectToDoFilterType}/>
           <CreateToDoForm onCreate={onCreateToDo} />
         </Flex>}
+      footer={<TaskCompletionReport/>}
       items={toDos}
       renderItem={
         (todo)=>

@@ -23,7 +23,25 @@ export const selectFilteredToDos = createSelector(selectAllToDos, selectToDoHubF
       exhaustiveCheck(toDoFilterType)
       return []
   }
-
 })
+
+export const selectAmountOfAllToDos = (state:StateSchema)=> state.toDoHub.items.length
+
+export const selectAmountOfCompletedToDos = (state:StateSchema)=> state.toDoHub.items.filter(t=>t.completed).length
+
+export const selectAmountOfUnCompletedToDos = (state:StateSchema)=> state.toDoHub.items.filter(t=>!t.completed).length
+
+export const selectPercentageOfCompletedToDos = createSelector(
+  selectAmountOfAllToDos,
+  selectAmountOfCompletedToDos,
+  (all, completed)=> Math.min(Math.round(completed/all * 100), 100)
+)
+
+export const selectShouldShowCompletionReport = createSelector(
+  selectAmountOfAllToDos,
+  selectToDoHubFilterType,
+  (all, toDoHubFilterType)=> Boolean(all && toDoHubFilterType === ToDoFilterTypeEnum.ALL)
+)
+
 
 
