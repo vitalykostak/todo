@@ -1,7 +1,6 @@
 export enum AppRoutes {
-    MAIN = 'MAIN',
-
-    NOT_FOUND = 'NOT_FOUND'
+  MAIN = 'MAIN',
+  NOT_FOUND = 'NOT_FOUND'
 }
 
 export const getMainRoute = () => '/'

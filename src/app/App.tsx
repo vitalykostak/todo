@@ -4,7 +4,7 @@ import AppRouter from './providers/router/ui/AppRouter/AppRouter'
 import './styles/reset.css'
 
 const App: FC = memo(() => {
-    return <AppRouter />
+  return <AppRouter />
 })
 
 export default App

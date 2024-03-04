@@ -7,15 +7,15 @@ import App from '@/app/App'
 const domElement = document.getElementById('root')
 
 if (!domElement) {
-    throw new Error('Provide dom element')
+  throw new Error('Provide dom element')
 }
 
 const root = createRoot(domElement)
 
 root.render(
-    <StoreProvider>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </StoreProvider>
+  <StoreProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StoreProvider>
 )

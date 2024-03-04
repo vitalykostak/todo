@@ -20,4 +20,8 @@ Unit Testing (Jest): `npm run test:unit`
 
 ### Entities
 
+- [ToDo](./src/entities/ToDo/readme.md)
+
 ### Features
+
+- [toDoHub](./src/features/toDoHub/readme.md)

@@ -3,14 +3,14 @@ import { type Configuration as WebpackDevServerConfiguration } from 'webpack-dev
 import { type BuildOptions } from './types/BuildOptions'
 
 export const buildWebServer = (
-    options: BuildOptions
+  options: BuildOptions
 ): WebpackDevServerConfiguration => {
-    const { port } = options
+  const { port } = options
 
-    return {
-        port,
-        hot: true,
-        historyApiFallback: true,
-        open: true
-    }
+  return {
+    port,
+    hot: true,
+    historyApiFallback: true,
+    open: true
+  }
 }

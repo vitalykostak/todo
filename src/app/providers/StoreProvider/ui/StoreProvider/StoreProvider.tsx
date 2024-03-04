@@ -4,15 +4,15 @@ import { Provider } from 'react-redux'
 import { createReduxStore } from '../../config/createStore'
 
 interface StoreProviderProps {
-    children: ReactNode
+  children: ReactNode
 }
 
 const StoreProvider: FC<StoreProviderProps> = memo((props) => {
-    const { children } = props
+  const { children } = props
 
-    const store = createReduxStore()
+  const store = createReduxStore()
 
-    return <Provider store={store}>{children}</Provider>
+  return <Provider store={store}>{children}</Provider>
 })
 
 export default StoreProvider
